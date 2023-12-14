@@ -56,4 +56,12 @@ public class AudioAnalyzer : MonoBehaviour
     {
         audio.time = value * audio.clip.length;
     }
+
+    public void Pause(bool pause)
+    {
+        if (pause)
+            audio.Pause();
+        else
+            audio.Play();
+    }
 }

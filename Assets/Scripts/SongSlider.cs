@@ -12,6 +12,9 @@ public class SongSlider : MonoBehaviour
     private void Start()
     {
         slider = GetComponent<Slider>();
+
+        AudioAnalyzer.inst.onPlay.AddListener(UpdateSlider);
+        slider.onValueChanged.AddListener(SkipThru);
     }
 
     private void Update()
